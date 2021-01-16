@@ -1,9 +1,13 @@
 {
+  "homepage": "https://rajeshjaga.github.io/",
   "name": "react-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build",
+    "build": "react-scripts build",
     "start": "react-scripts start"
   },
   "author": "",
@@ -25,5 +29,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
