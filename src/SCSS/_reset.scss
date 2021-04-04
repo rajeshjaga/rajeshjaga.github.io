@@ -7,21 +7,25 @@
   font-size: 100%;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #222;
-  color: antiquewhite;
+  font-family: "Poppins";
   min-height: 100vh;
   width: 100%;
-  display: grid;
-  place-items: center;
 }
-.app {
-    text-align: center;
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+h1 {
+  font-size: 3rem;
 }
-  p {
-    font-size: 1rem;
-  }
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1rem;
+}
+a {
+  text-decoration: none;
 }

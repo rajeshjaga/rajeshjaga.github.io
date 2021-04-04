@@ -1,1 +1,58 @@
 @use './reset';
+
+.logo {
+  background: #000;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+ul.nav-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  li {
+    list-style: none;
+    padding: 0.5rem 1rem;
+    margin: 0 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    a {
+      color: #777;
+      &:hover {
+        color: #000;
+      }
+    }
+    &:hover a {
+      color: #000;
+    }
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #000;
+    color: #fff;
+  }
+}
+@media (prefers-color-scheme: light) {
+  body {
+    background: #fff;
+    color: #000;
+  }
+  .logo {
+    color: black;
+  }
+}
