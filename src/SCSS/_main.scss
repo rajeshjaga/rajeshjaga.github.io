@@ -9,7 +9,8 @@
   cursor: pointer;
 }
 nav {
-  position: sticky;
+  width: 100%;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
@@ -26,12 +27,12 @@ ul.nav-link {
   align-items: center;
   li {
     list-style: none;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     margin: 0 1.2rem;
     border-radius: 10px;
     cursor: pointer;
     a {
-      color: #777;
+      color: rgb(80, 80, 80);
       &:hover {
         color: #000;
       }
@@ -52,7 +53,36 @@ ul.nav-link {
     background: #fff;
     color: #000;
   }
-  .logo {
-    color: black;
+}
+
+@media (max-width: 690px) {
+  ul.mobile-hide {
+    position: absolute;
+    top: 0;
+    padding: 1rem 2rem;
+    left: 0;
+    flex-direction: column;
+    background: rgb(246, 255, 193);
+    width: 100%;
+    transform: translateY(-100%);
+    li {
+      padding: 2rem 0;
+    }
+  }
+}
+
+.home {
+  // background: #1cf;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 5rem;
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 2.5rem;
   }
 }

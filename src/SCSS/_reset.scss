@@ -7,9 +7,18 @@
   font-size: 100%;
 }
 body {
-  font-family: "Poppins";
+  font-family: "Sofia Pro";
   min-height: 100vh;
   width: 100%;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    left: 5rem;
+    // background: #fff;
+  }
 }
 h1 {
   font-size: 3rem;

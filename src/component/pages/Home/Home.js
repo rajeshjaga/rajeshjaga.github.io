@@ -2,12 +2,12 @@ import Work from "../Work";
 const Home = () => {
   return (
     <>
-      <section>
-        <Work />
-        <h1>hello,</h1>
-        <h3>my name is rajesh </h3>
-        <h3>i'm A designer and developer </h3>
+      <section className="home">
+        <h1>Hello,</h1>
+        <h3>My name is Rajesh</h3>
+        <h3>I'm Creative web designer and developer</h3>
       </section>
+      <Work />
     </>
   );
 };
