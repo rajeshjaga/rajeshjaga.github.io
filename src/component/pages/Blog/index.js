@@ -1,7 +1,9 @@
 const Blog = () => {
   return (
     <>
-      <h1>hello Blog</h1>
+      <section>
+        <h1>hello Blog</h1>
+      </section>
     </>
   );
 };

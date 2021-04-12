@@ -1,0 +1,41 @@
+@media (prefers-color-scheme: dark) {
+  $lmbg: #000;
+  $lmfnh: #fff;
+  body {
+    background: $lmbg;
+    color: $lmfnh;
+  }
+  nav ul li {
+    a {
+      color: $lmfnh;
+      color: lighten($lmfnh, 20%);
+      transition: all 0.15s ease-in;
+      &:hover {
+        color: $lmfnh;
+      }
+    }
+    &:hover a {
+      color: main$lmfnh;
+    }
+  }
+}
+@media (prefers-color-scheme: light) {
+  $lmbg: #fff;
+  $lmfnh: #000;
+  body {
+    background: $lmbg;
+    color: $lmfnh;
+  }
+  nav ul li {
+    a {
+      transition: all 0.15s ease-in;
+      color: darken($lmfnh, 20%);
+      &:hover {
+        color: $lmfnh;
+      }
+    }
+    &:hover a {
+      color: $lmfnh;
+    }
+  }
+}

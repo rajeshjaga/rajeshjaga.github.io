@@ -7,7 +7,7 @@ const Nav = () => {
   console.log(window.location.pathname);
   return (
     <>
-      <nav>
+      <nav className="seperator">
         <div>
           <Link to="/">
             <div className="logo">
@@ -15,7 +15,7 @@ const Nav = () => {
             </div>
           </Link>
         </div>
-        <ul className="nav-link mobile-hide">
+        <ul className="nav-link mobile-hide seperator">
           <li>
             <Link to="/blog">Blog</Link>
           </li>

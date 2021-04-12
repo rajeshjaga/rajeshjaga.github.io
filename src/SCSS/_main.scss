@@ -1,8 +1,11 @@
 @use './reset';
+@use "./helper";
+$bg: #000;
+$fonts: #fff;
 
 .logo {
-  background: #000;
-  color: #fff;
+  background: $bg;
+  color: $fonts;
   padding: 0.5rem;
   font-size: 1.2rem;
   font-weight: 500;
@@ -11,20 +14,15 @@
 nav {
   width: 100%;
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 0.5rem 5rem;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
 }
 
 ul.nav-link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   li {
     list-style: none;
     padding: 0.5rem;
@@ -32,26 +30,13 @@ ul.nav-link {
     border-radius: 10px;
     cursor: pointer;
     a {
-      color: rgb(80, 80, 80);
-      &:hover {
-        color: #000;
-      }
+      transition: 0.3s all ease-in-out;
+      color: darken(#fff, 15%);
     }
     &:hover a {
-      color: #000;
+      transition: 0.3s all ease-in-out;
+      color: darken(#fff, 5%);
     }
-  }
-}
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #000;
-    color: #fff;
-  }
-}
-@media (prefers-color-scheme: light) {
-  body {
-    background: #fff;
-    color: #000;
   }
 }
 
@@ -72,7 +57,9 @@ ul.nav-link {
 }
 
 .home {
-  // background: #1cf;
+  position: relative;
+  background: $bg;
+  z-index: 1;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -81,8 +68,70 @@ ul.nav-link {
   h1 {
     font-size: 5rem;
     margin-bottom: 1rem;
+    position: relative;
+    color: $fonts;
+    &:after {
+      height: 100%;
+      background: $bg;
+      width: 100%;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: pulldown 2s ease-in-out;
+      transition: transform;
+      transform: scaleY(0);
+    }
   }
   h3 {
+    position: relative;
     font-size: 2.5rem;
+    color: $fonts;
+
+    &:after {
+      height: 100%;
+      background: $bg;
+      width: 100%;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: pulldown2 3s ease-out;
+      transition: transform;
+      transform: scaleY(0);
+    }
   }
+}
+@keyframes pulldown {
+  0% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  70% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform-origin: bottom;
+    transform: scaleY(0);
+  }
+}
+@keyframes pulldown2 {
+  0% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  90% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform-origin: bottom;
+    transform: scaleY(0);
+  }
+}
+
+section {
+  padding: 3rem 5rem;
+  min-height: 100vh;
 }

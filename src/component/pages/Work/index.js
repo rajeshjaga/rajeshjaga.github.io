@@ -1,7 +1,9 @@
 const Work = () => {
   return (
     <>
-      <h1>Soon to be uploaded </h1>
+      <section>
+        <h1>Soon to be uploaded </h1>
+      </section>
     </>
   );
 };
